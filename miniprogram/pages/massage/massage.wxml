@@ -1,0 +1,26 @@
+<!--pages/massage/massage.wxml-->
+<view class="container">
+<scroll-view scroll-y='true' class="scroll-left">
+<block wx:for="{{leftData}}" wx:key="index" >
+<view class="left-item {{curNav==item.left_id?'active':''}}" bind:tap="switchRinght" data-index="{{index}}" data-id="{{item.left_id}}">{{item.name}}</view>
+</block>
+</scroll-view>
+ <scroll-view class="scroll-right" scroll-y="true">
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{leftData[curIndex].children.length>0}}">
+      <block wx:for="{{leftData[curIndex].children}}" wx:key="index">
+        <view class="right-item">
+        <!--界面跳转 -->
+          <navigator url="../../detail/detail">
+            <image src="{{item.image}}"></image>
+            <text>{{item.name}}</text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <!--如果无数据，则显示数据-->
+    <view class="noData" wx:else>
+      <text>该分类暂无数据</text>
+    </view>
+  </scroll-view>
+</view>

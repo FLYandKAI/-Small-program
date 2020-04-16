@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/dis/dis",
+    "pages/massage/massage"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#99ccff",
+    "navigationBarTitleText": "摩法师",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#99ccff",
+    "backgroundColor": "#99ccff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home_.png",
+        "selectedIconPath": "images/home.png"
+      },
+      {
+        "pagePath": "pages/massage/massage",
+        "text": "按摩区",
+        "iconPath": "images/acupoint_.png",
+        "selectedIconPath": "images/acupoint.png"
+      },
+      {
+        "pagePath": "pages/dis/dis",
+        "text": "发现",
+        "iconPath": "images/dis_.png",
+        "selectedIconPath": "images/dis.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

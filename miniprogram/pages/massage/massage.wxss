@@ -1,0 +1,74 @@
+/* pages/massage/massage.wxss */
+.container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border-color: #ccffff;
+}
+.scroll-left{
+  width: 25%;
+  height: 100%;
+  background-color: #F2F2F2;
+  text-align: center;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.scroll-left .left-item{
+  height:100rpx;
+  line-height:100rpx;
+  font-size:35rpx;
+}
+.scroll-left .left-item.active{
+  position: relative;
+  background:#FFF;
+  color:#99ccff;
+}
+.scroll-left .left-item.active::before{
+  display: inline-block;
+  width:6rpx;
+  height:60rpx;
+  background:#99ccff;
+  content:'';
+  position:absolute;
+  top:20rpx;
+  left:0;
+}
+.scroll-right{
+  position:absolute;
+  top:0;
+  right:0;
+  width:75%;
+  height:100%;
+}
+ 
+.scroll-right .right-item{
+  float: left;   
+  width: 33.33%; 
+  text-align: center;  
+  padding:30rpx 0;
+} 
+.scroll-right .right-item image{
+  width: 120rpx;  
+  height: 120rpx; 
+} 
+.scroll-right .right-item text{
+  display: block;  
+  margin-top: 20rpx;  
+  font-size: 28rpx;  
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;  
+} 
+.noData{
+  padding:100rpx;
+  text-align: center;  
+} 
+ 
+
+.noData text{
+  font-size:28rpx;
+  display:block;
+  color:#BBB;
+}
+

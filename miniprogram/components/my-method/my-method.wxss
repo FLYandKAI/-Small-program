@@ -1,0 +1,47 @@
+/* components/my-mothod/my-mothod.wxss */
+.my-method{
+  text-align: center;
+  padding-bottom: 85 rpx;
+  position: relative;
+  margin-right: 10rpx;
+  margin-left: 15rpx;
+  margin-top: 20rpx;
+  
+}
+.image{
+  width: 100%;
+  border-radius: 10rpx;
+}
+.name_area{
+  margin-bottom: 10rpx;
+}
+.scroll-right{
+  position:absolute;
+  top:0;
+  right:0;
+  width:75%;
+  height:100%;
+}
+.scroll-right .right-item{
+  float: left;   
+  width: 33.33%; 
+  text-align: center;  
+  padding:30rpx 0;
+} 
+.scroll-right .right-item text{
+  display: block;  
+  margin-top: 20rpx;  
+  font-size: 28rpx;  
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;  
+} 
+.noData{
+  padding:100rpx;
+  text-align: center;  
+} 
+.noData text{
+  font-size:28rpx;
+  display:block;
+  color:#BBB;
+}

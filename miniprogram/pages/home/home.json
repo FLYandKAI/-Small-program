@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+  "my-method":"/components/my-method/my-method"
+  }
+}

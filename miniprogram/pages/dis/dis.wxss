@@ -1,49 +1,4 @@
-/* pages/dis/dis.wxss */
-.head{
-  overflow: hidden;
-  border-radius:60%;
-   width: 150rpx;  
-  height: 150rpx;  
-    margin: 20rpx;  
-}
-.float{
-  float: left;
-}
-.name{
-  line-height: 50rpx;
-  margin-top: 75rpx;
-  margin-left: 200rpx;
-  font-size: 50rpx;
-  position: relative;
-}
-.dis_container{
-  background-color: #99ccffb0;
-  height:200rpx;
-  width: 100%;
-}
-.navs {  
-    
-    display: flex;
-}
-.nav-item {   
-    border-left:1rpx solid #0b0c3349;
-    width: 25%;  
-    display: flex;  
-    align-items: center;  
-    flex-direction: column;  
-    padding: 20rpx;
-    
-}
-.nav-item text {  
-    margin-top: 5rpx;  
-    font-size: 30rpx;  
-    color: gray;
-}
-.segment{
-  height: 15rpx;
-  width: 100%;
-  background-color: #0b0c3349
-}
+
 .header {
     box-sizing: border-box;
     border-top: 1rpx solid #ececec;
@@ -67,7 +22,7 @@
   font-size: 34rpx;
   color: #FFFFFF;
   line-height: 75rpx;
-  background: #99ccffb0;
+  background: #99ccff;
   border-radius: 80rpx;
   margin: 10rpx;
 }

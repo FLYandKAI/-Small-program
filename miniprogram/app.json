@@ -2,8 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/dis/dis",
-    "pages/massage/massage"
-    
+    "pages/massage/massage",
+    "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,8 +13,8 @@
   },
   "tabBar": {
     "color": "#ffffff",
-    "selectedColor": "#99ccff",
     "backgroundColor": "#99ccff",
+    "selectedColor": "#ffff00",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -30,9 +30,15 @@
       },
       {
         "pagePath": "pages/dis/dis",
-        "text": "发现",
+        "text": "讨论区",
         "iconPath": "images/dis_.png",
         "selectedIconPath": "images/dis.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my_.png",
+        "selectedIconPath": "images/my.png"
       }
     ]
   },

@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
     scrollLeft: 0,
     currentTab: 0,
     topData: [{
@@ -24,38 +23,12 @@ Page({
         top_id: 4,
         name: '重要公告'
       }],
-
-     Items: [
-      {
-        typeId: 0,
-        name: '关注',
-        amount:0
-      },
-      {
-        typeId: 1,
-        name: '粉丝',
-        amount: 0
-        
-      },
-      {
-        typeId: 2,
-        name: '收藏',
-        amount: 0
-      },
-      {
-        typeId: 3,
-        name: '帖子',
-        amount: 0
-      }
-    ],
-   
   },
-
   switch(e) {
-
     var index = e.currentTarget.dataset.current;
     this.setData({
       currentTab: index
     })
   }
+  
 })

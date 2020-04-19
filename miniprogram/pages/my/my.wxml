@@ -1,0 +1,21 @@
+<!--miniprogram/pages/my/my.wxml-->
+<!--pages/dis/dis.wxml-->
+<view class="dis_container">
+<view class="head float">
+<open-data type="userAvatarUrl"></open-data>
+</view>
+<view class="name float">
+<open-data type="userNickName"></open-data>
+</view>
+<!-- ---------------- -->
+</view>
+<view class="navs">
+  <block wx:for-items="{{Items}}" wx:key="name">
+    <view class="nav-item"data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+      <text>{{item.amount}}</text>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+  </view>
+  <view class="segment"></view>
+

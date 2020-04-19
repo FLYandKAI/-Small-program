@@ -8,41 +8,55 @@ Page({
 
     scrollLeft: 0,
     currentTab: 0,
-    topData: [{
-      top_id: 0,
-      name: '全部'
-    }, {
-      top_id: 1,
-      name: '热门'
-    }, {
-      top_id: 2,
-      name: '精华'
-    }, {
-      top_id: 3,
-      name: '建议交流'
-    }, {
-      top_id: 4,
-      name: '重要公告'
-    }],
-
     Items: [
       {
         typeId: 0,
-        name: '我的',
+        name: '粉丝',
         amount: 0
       },
       {
         typeId: 1,
-        name: '收藏',
+        name: '关注',
         amount: 0
 
       },
       {
         typeId: 2,
-        name: '发布',
+        name: '动态',
         amount: 0
       }
-    ],
+    ], 
+    userlist: [
+      {
+        typeId: 0,
+        name: '关于我们',
+        image:'/images/hind.png',
+        arrow:'/images/next.png'
+      }
+    ], 
+    my_items: [
+      {
+        id: 0,
+        name: '我的收藏',
+        image:'/images/collection.png'
+      },
+      {
+        id: 1,
+        name: '我的评论',
+        image: '/images/message.png'
+
+      },
+      {
+        id: 2,
+        name: '点赞记录',
+        image: '/images/like.png'
+      },
+      {
+        id: 3,
+        name: '浏览足迹',
+        image: '/images/history.png'
+      }
+    ]
 
   },
 

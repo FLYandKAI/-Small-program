@@ -18,4 +18,23 @@
   </block>
   </view>
   <view class="segment"></view>
-
+  <!-- ------------ -->
+<view class="my">
+<block wx:for-items="{{my_items}}" wx:key="index">
+<view class="my_items" data-type="{{item}}" data-index="{{item}}">
+  <image src="{{item.image}}"/>
+  <view>{{item.name}}</view>
+</view>
+</block>
+</view>
+<view class="segment"></view>
+<!-- ------------ -->
+<view class="userlist">
+<block wx:for-items="{{userlist}}" wx:key="index">
+<view class="list_item" data-type="{{item}}" data-index="{{item}}">
+  <image src="{{item.image}}"/>
+  <text>{{item.name}}</text>
+  <image class="arrow" src="{{item.arrow}}"/>
+</view>
+</block>
+</view>

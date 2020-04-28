@@ -1,0 +1,16 @@
+/* components/my-text/my-text.wxss */
+.my_text {
+   height: 60px;
+   line-height: 60px;
+   text-align: center;
+ }
+.my_text .line {
+  display: inline-block;
+  width: 30%;
+  border-top: 1px solid rgb(214, 209, 209) ;
+}
+.my_text .text {
+  color: #686868;
+  vertical-align: -4px;
+ 
+  }

@@ -1,15 +1,13 @@
 <view>
   <swiper autoplay="true" indicator-dots="true" circular="true" indicator-color="while"  indicator-active-color="#99ccff" style="height:{{hei}}">
-    <swiper-item><image class='auto_image' mode="aspectFill" src="/images/1.jpg" /></swiper-item>
-    <swiper-item><image class='auto_image' mode="aspectFill" src="/images/2.jpg"/></swiper-item>
-    <swiper-item><image  class='auto_image' mode="aspectFill" src="/images/3.jpg"/></swiper-item>
+  <block wx:for="{{recommend}}" wx:key="index">
+    <swiper-item><image class='auto_image' mode="aspectFill" src="{{item.imageUrl}}" /></swiper-item>
+    </block>
   </swiper>
 </view>
+<my-text title='身体部位'/>
 <view class="my-method">
-<block>
-<my-method class="method-item" item="{{item}}"/>
-<my-method class="method-item"/>
-<my-method class="method-item"/>
-<my-method class="method-item"/>
+<block wx:for="{{methods}}" wx:key="index">
+<my-method class="method-item" name="{{item.name}}" image="{{item.imageUrl}}"/>
 </block>
 </view>

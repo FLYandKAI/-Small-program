@@ -1,0 +1,6 @@
+<!--components/my-text/my-text.wxml-->
+<view class="my_text">
+<text class="line"></text>
+<text class="text">{{title}}</text>
+<text class="line"></text>
+</view>

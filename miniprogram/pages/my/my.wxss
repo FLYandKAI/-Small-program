@@ -60,9 +60,11 @@ text-align: center;
   font-size: 28rpx;
 }
 .userlist{
+  background-color: #ebebec;
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 5rpx;
 }
 .list_item{
 display: inline-block;

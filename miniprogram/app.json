@@ -24,7 +24,7 @@
       },
       {
         "pagePath": "pages/massage/massage",
-        "text": "按摩区",
+        "text": "按摩手法",
         "iconPath": "images/acupoint_.png",
         "selectedIconPath": "images/acupoint.png"
       },

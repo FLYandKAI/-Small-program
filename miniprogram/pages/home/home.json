@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-  "my-method":"/components/my-method/my-method"
+  "my-method":"/components/my-method/my-method",
+  "my-text":"/components/my-text/my-text"
   }
 }

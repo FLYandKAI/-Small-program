@@ -44,21 +44,30 @@
  
 .scroll-right .right-item{
   float: left;   
-  width: 33.33%; 
+  width: 100%; 
   text-align: center;  
   padding:30rpx 0;
 } 
 .scroll-right .right-item image{
-  width: 120rpx;  
-  height: 120rpx; 
+  width: 500rpx;  
+  height: 500rpx; 
+} 
+.scroll-right .right-item .method{
+  width: 170rpx;  
+  height: 50rpx; 
+} 
+.scroll-right .right-item .attention{
+  width: 100rpx;  
+  height: 60rpx; 
 } 
 .scroll-right .right-item text{
   display: block;  
-  margin-top: 20rpx;  
-  font-size: 28rpx;  
-  overflow: hidden;  
-  white-space: nowrap;  
-  text-overflow: ellipsis;  
+  background-color: #e6e6e1;
+  margin-top: 20rpx; 
+  margin-bottom: 20rpx;  
+  font-size: 35rpx;  
+  word-wrap:break-word; 
+  margin-left: 5rpx;
 } 
 .noData{
   padding:100rpx;

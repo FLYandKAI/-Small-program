@@ -8,9 +8,10 @@
   margin-top: 20rpx;
   
 }
-.image{
+.my-method .image{
   width: 100%;
   border-radius: 10rpx;
+  height: 400rpx;
 }
 .name_area{
   margin-bottom: 10rpx;

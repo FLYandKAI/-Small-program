@@ -1,11 +1,10 @@
-// components/my-mothod/my-mothod.js
+// components/my-text/my-text.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    name:String,
-    image:String
+    title:String
   },
 
   /**

@@ -73,8 +73,6 @@
   padding:100rpx;
   text-align: center;  
 } 
- 
-
 .noData text{
   font-size:28rpx;
   display:block;

@@ -8,24 +8,6 @@ Page({
 
     scrollLeft: 0,
     currentTab: 0,
-    Items: [
-      {
-        typeId: 0,
-        name: '粉丝',
-        amount: 0
-      },
-      {
-        typeId: 1,
-        name: '关注',
-        amount: 0
-
-      },
-      {
-        typeId: 2,
-        name: '动态',
-        amount: 0
-      }
-    ], 
     userlist: [
       {
         typeId: 0,
@@ -53,18 +35,22 @@ Page({
       },
       {
         id: 3,
-        name: '浏览足迹',
+        name: '我的动态',
         image: '/images/history.png'
       }
     ]
 
   },
-
+  onclick_us(){
+    wx.navigateTo({
+      url: '../us_page/us_page',
+    })
+  },
   switch(e) {
-
     var index = e.currentTarget.dataset.current;
     this.setData({
       currentTab: index
     })
-  }
+  },
+ 
 })

@@ -1,6 +1,6 @@
 <!--components/my-mothod/my-mothod.wxml-->
 <view class="my-method">
-<image class="image" src="{{image}}" mode="aspectFill"/>
+<image class="image" src="{{image}}" mode="widthfix"/>
 <view class="name_area">
   <text class="name">{{name}}</text>
 </view>

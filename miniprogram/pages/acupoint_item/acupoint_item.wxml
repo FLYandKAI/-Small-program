@@ -1,0 +1,21 @@
+<!--miniprogram/pages/acupoint_item/acupoint_item.wxml-->
+<view>
+  <image class="acupoint-image" src="{{acupoint_item_data.imageurl}}" mode=""/>
+  <view>
+  <view class="title">
+  <text>{{acupoint_item_data.acupoint}}</text>
+  </view>
+  <my-text title="位置"/>
+  <view class="location">
+  <text>{{acupoint_item_data.location}}</text>
+  </view>
+  <my-text title="效果"/>
+  <view  class="effect">
+  <text>{{acupoint_item_data.effect}}</text>
+  </view>
+   <my-text title="按摩方式"/>
+  <view  class="effect">
+  <text>{{acupoint_item_data.mode}}</text>
+  </view>
+  </view>
+</view>

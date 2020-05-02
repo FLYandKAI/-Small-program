@@ -3,7 +3,10 @@
     "pages/home/home",
     "pages/dis/dis",
     "pages/massage/massage",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/acupoint/acupoint",
+    "pages/acupoint_item/acupoint_item",
+    "pages/us_page/us_page"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -17,7 +17,7 @@ Page({
    */
   onLoad: function (options) {
     request({
-      url: 'http://120.25.217.98:8000/massage/getMassageMethods'
+      url: 'https://www.mofashiteam.com/massage/getMassageMethods'
     }).then(res => {
       this.setData({
         leftData: res.data,

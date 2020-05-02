@@ -6,12 +6,13 @@
   margin-right: 10rpx;
   margin-left: 15rpx;
   margin-top: 20rpx;
-  
+  border-right: 1rpx solid rgb(181, 183, 185);
+  border-bottom: 1rpx solid rgb(181, 183, 185);
 }
 .my-method .image{
   width: 100%;
   border-radius: 10rpx;
-  height: 400rpx;
+  height:400rpx;
 }
 .name_area{
   margin-bottom: 10rpx;

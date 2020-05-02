@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {},
     scrollLeft: 0,
     currentTab: 0,
     topData: [{
@@ -29,6 +30,10 @@ Page({
     this.setData({
       currentTab: index
     })
+  },
+
+  onShow() {
+    const userInfo = wx.getStorageSync("userinfo");
+    this.setData({ userInfo })
   }
-  
 })

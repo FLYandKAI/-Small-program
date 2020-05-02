@@ -7,7 +7,7 @@
 </view>
 <my-text title='身体部位'/>
 <view class="my-method">
-<block wx:for="{{methods}}" wx:key="index">
-<my-method class="method-item" name="{{item.name}}" image="{{item.imageUrl}}"/>
+<block wx:for="{{bodypart}}" wx:key="index">
+<my-method class="method-item" name="{{item.bobyPart}}" image="{{item.imagesUrl}}" bind:tap='onClick' data-index="{{index}}"/>
 </block>
 </view>

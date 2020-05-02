@@ -7,4 +7,39 @@
   </scroll-view>
   </view>
 
+<!-- 背景START -->
+<view class="background_wrap">
+  <view class="backgroundimage_wrap">
+    <image class="backgroundimage" src="/images/backgroundimage.jpg" mode="widthFix"></image>
+  </view>
+  <view class="icon_wrap">
+    <text class="icon_text">{{userInfo.nickName}}</text>
+    <image class="icon_image" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+</view>
+<!-- 背景END -->
 
+<!-- 讨论条目start -->
+<view class="disitem_wrap">
+  <view class="disitem_icon_wrap">
+    <image class="disitem_icon_image" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="disitem_text_wrap">
+    <view class="disitem_text_name">
+      <text>{{userInfo.nickName}}</text>
+    </view>
+    <text class="disitem_text_time">13分钟前</text>
+    <view class="disitem_text_content">
+      <text>
+        隔壁开了家早餐店，九点老爸发了一条微信给我，说:丽情，起床啦，我去买个汤粉给你我内心os:刚好我待会要上课，没想到捡到便宜当然，我觉得这家早餐店的粉不好吃，感觉下了好多的味精
+      </text>
+    </view>
+    <view class="disitem_text_icon_wrap">
+      <view class="disitem_text_icon">
+        <view class="iconfont icon-pinglun"></view>
+        <view class="iconfont icon-dianzan"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 讨论条目end -->

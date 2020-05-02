@@ -1,0 +1,11 @@
+<!--miniprogram/pages/acupoint/acupoint.wxml-->
+<image  mode="aspectFill" class="background" src="/images/background.jpg"></image>
+<my-text  title="部位包含穴位"/>
+<view class="acupoints">
+<block wx:for="{{acupoint_data}}" wx:key="index">
+<view class="acupoint-item"  bind:tap="click_acupoint" data-acupoint="{{item.acupoint}}" data-effect="{{item.effect}}" data-mode="{{item.mode}}" data-imageUrl="{{item.imageUrl}}" data-location="{{item.location}}">
+<text>{{item.acupoint}}</text>
+<image class="arrow" src="/images/arrow_right.png"/>
+</view>
+</block>
+</view>

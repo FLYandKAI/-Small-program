@@ -1,0 +1,21 @@
+/* miniprogram/pages/us_page/us_page.wxss */
+.us_page{
+  position: relative;
+  text-align: center;
+}
+.us_page text{
+  display: block;
+  font-size: 40rpx;
+  margin-top: 80rpx;
+  margin-bottom: 50rpx;
+}
+.us_page image{
+  width: 400rpx;
+  height: 400rpx;
+}
+.us_page .reminder{
+  margin: 0rpx;
+  font-size:30rpx;
+  display:block;
+  color:rgb(155, 153, 153);
+}

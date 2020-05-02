@@ -4,38 +4,33 @@ Page({
 
 
   data: {
-    methods:[],
+    bodypart:[],
     recommend:[]
   },
   
   
   onLoad: function (options) {
       request({
-        url:'http://120.25.217.98:8000/massage/getMassageMethods'
+        url:'https://www.mofashiteam.com/massage/getBodyPart'
       }).then(res=>{
         this.setData({
-          methods:res.data,
+          bodypart:res.data,
         })
         
       }),
         request({
-        url: 'http://120.25.217.98:8000/massage/index/getRecommend'
+        url: 'https://www.mofashiteam.com/massage/index/getRecommend'
         }).then(res => {
           this.setData({
             recommend: res.data,
           })
-          console.log(res.data)
+         
         })
   },
-
-
-
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  onClick(e){
+     wx.navigateTo({
+       url: '../acupoint/acupoint?id='+(e.currentTarget.dataset.index+1),
+     })
   },
 
 

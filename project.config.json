@@ -2,7 +2,7 @@
 	"miniprogramRoot": "miniprogram/",
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
@@ -51,15 +51,35 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/my/my",
-					"pathName": "pages/my/my",
+					"name": "pages/dis/dis",
+					"pathName": "pages/dis/dis",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/massage/massage",
-					"pathName": "pages/massage/massage",
+					"name": "pages/acupoint/acupoint",
+					"pathName": "pages/acupoint/acupoint",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/acupoint_item/acupoint_item",
+					"pathName": "pages/acupoint_item/acupoint_item",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/us_page/us_page",
+					"pathName": "pages/us_page/us_page",
 					"scene": null
 				}
 			]

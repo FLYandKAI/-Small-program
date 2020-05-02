@@ -16,28 +16,13 @@
   font-size: 50rpx;
   position: relative;
 }
+
 .dis_container{
-  background-color: #52a4ed;
+  background-color: rgb(106, 177, 243);
   height:200rpx;
   width: 100%;
 }
-.navs {  
-    display: flex;
-}
-.nav-item {   
-    border-left:1rpx solid #cfcfd4;
-    width:38%;  
-    display: flex;  
-    align-items: center;  
-    flex-direction: column;  
-    padding: 20rpx;
-    
-}
-.nav-item text {  
-    margin-top: 5rpx;  
-    font-size: 30rpx;  
-    color: #737374;
-}
+
 .segment{
   height: 15rpx;
   width: 100%;
@@ -49,6 +34,7 @@
   margin-bottom: 20rpx;
 }
 .my_items{
+border-left: 1rpx solid #cfcfd4;
 flex: 1;
 text-align: center;
 }

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-text": "/components/my-text/my-text"
+  }
+}

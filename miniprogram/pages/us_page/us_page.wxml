@@ -1,0 +1,6 @@
+<!--miniprogram/pages/us_page/us_page.wxml-->
+<view class="us_page">
+<text>欢迎大家来咨询我们哦！</text>
+<image src="../../images/us.jpg" mode="aspectFill"/>
+<text class="reminder">微信扫描二维码，欢迎添加管理员微信</text>
+</view>

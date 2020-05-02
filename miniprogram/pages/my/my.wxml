@@ -1,25 +1,16 @@
 <!--miniprogram/pages/my/my.wxml-->
 <!--pages/dis/dis.wxml-->
-<view class="dis_container">
+<view class="dis_container" bind:tap="modify_data">
 <view class="head float">
 <open-data type="userAvatarUrl"></open-data>
 </view>
 <view class="name float">
 <open-data type="userNickName"></open-data>
 </view>
-<!-- ---------------- -->
+
 </view>
-<view class="navs">
-  <block wx:for-items="{{Items}}" wx:key="name">
-    <view class="nav-item"data-type="{{item.name}}" data-typeid="{{item.typeId}}">
-      <text>{{item.amount}}</text>
-      <text>{{item.name}}</text>
-    </view>
-  </block>
-  </view>
-  <view class="segment"></view>
-  <!-- ------------ -->
-<view class="my">
+<!-- ---------------- -->
+<view class="my"> 
 <block wx:for-items="{{my_items}}" wx:key="index">
 <view class="my_items" data-type="{{item}}" data-index="{{item}}">
   <image src="{{item.image}}"/>
@@ -31,7 +22,7 @@
 <!-- ------------ -->
 <view class="userlist">
 <block wx:for-items="{{userlist}}" wx:key="index">
-<view class="list_item" data-type="{{item}}" data-index="{{item}}">
+<view class="list_item" data-type="{{item}}" bind:tap="onclick_us" data-index="{{item}}">
   <image src="{{item.image}}"/>
   <text>{{item.name}}</text>
   <image class="arrow" src="{{item.arrow}}"/>

@@ -1,0 +1,72 @@
+@import "../../../app.wxss";
+/* 导航容器 */
+.tabar_wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rpx 10rpx;
+  background-color: white;
+  align-items: center;
+}
+/* 取消 */
+.cancel{
+  font-size: 30rpx;
+}
+/* 发布 */
+.cantAdd{
+  pointer-events: none;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+  background-color: rgb(228, 223, 223);
+  color: rgb(163, 162, 162);
+}
+.canAdd{
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+  background-color:green;
+  color: white;
+}
+/* 输入框容器 */
+.input_wrap{
+  background-color: white;
+  padding: 30rpx 50rpx;
+}
+/* 标题输入框 */
+.areaTitle{
+
+}
+/* 输入框内容 */
+.areaContent{
+  margin-top: 80rpx;
+  margin-bottom: 50rpx;
+}
+.iconfont{
+  font-size: 50rpx;
+}
+.addbtn{
+  background-color: silver;
+  padding: 65rpx;
+  width: 50rpx;
+}
+.AddImg_wrap{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+}
+iamge_item{
+  width: 190rpx;
+  height: 190rpx;
+}
+.image{
+  height: 190rpx;
+  width: 190rpx;
+}
+.iamge_cancel{
+    width:30rpx;
+    height:30rpx;
+    border-radius:50%;
+    position:relative;
+    left:-15rpx;
+    bottom: 175rpx;
+}

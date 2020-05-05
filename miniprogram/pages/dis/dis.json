@@ -1,4 +1,9 @@
 {
+  "usingComponents": {
+    "backTop": "/components/backTop/backTop",
+    "hasImage": "/pages/dis/component/item/hasImage/hasImage",
+    "noImage": "/pages/dis/component/item/noImage/noImage"
+  },
   "navigationBarTitleText": "讨论区",
   "navigationBarTextStyle": "white"
 }

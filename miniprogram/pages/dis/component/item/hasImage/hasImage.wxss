@@ -1,0 +1,55 @@
+@import "../../../../../app.wxss";
+.wrap{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin-bottom: 10rpx;
+  width: 100%;
+}
+.item_container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3%;
+  padding-bottom: 2%;
+  border-bottom: rgb(231, 230, 230) solid 3rpx;
+  width: 95%;
+}
+.item_container > image{
+  width:35%;
+}
+.text_container{
+  flex-direction: column;
+  width: 65%;
+  margin-left: 3%;
+}
+.text_container > .title{
+  color: blue;
+  font-size: 32rpx;
+  margin-left: 2%;
+}
+.text_container > .content{
+  font-size: 27rpx;
+  display: -webkit-box;
+  width: 100%;
+  content: '';
+  text-align:justify;
+  text-align-last:left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: rgb(80, 80, 80);
+}
+.iconfont {
+  font-size: 22rpx;
+}
+.item_info{
+  color: #8a8a8a;
+  size: 22rpx;
+}
+.item_info_time{
+  margin-left: 5%;
+}

@@ -1,0 +1,2 @@
+<text bind:tap="handleBackTop" class="iconfont icon-backTop backTop"></text>
+

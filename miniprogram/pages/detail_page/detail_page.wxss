@@ -1,0 +1,112 @@
+/* miniprogram/pages/detail_page/detail_page.wxss */
+.detail_author{
+    width: 100%;
+    height: 170rpx;
+}
+.detail_author .detail_head image{
+   width: 125rpx; 
+  height: 125rpx;  
+  margin: 20rpx;  
+  float: left;
+}
+.detail_author .detail_name{
+   margin-top: 35rpx;
+   height: 50rpx;
+   display: inline-block;
+}
+.detail_author .detail_name text{
+  font-size: 40rpx;
+  color: blue;
+}
+.detail_author .detail_time{
+display:block;
+height: 60rpx;
+margin-top: 30rpx;
+}
+.detail_author .detail_time text{
+  font-size:30rpx;
+  display:block;
+  position: relative;
+  color:rgb(155, 153, 153);
+}
+.detail_invitation .title{
+  margin-left: 40rpx;
+}
+.detail_invitation .title text{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.detail_invitation .detail_content{
+  margin-left: 20rpx;
+}
+.detail_invitation .detail_content text{
+  font-size: 30rpx;
+}
+.detail_invitation .images{
+  display: inline-block;
+  width: 32%;
+}
+.detail_invitation .images image{
+  height: 200rpx;
+  width: 237rpx;
+  position: relative;
+  margin-left: 5rpx;
+}
+.role{
+   display: flex; 
+   margin-top: 30rpx;
+}
+.role view{
+  margin-left:100rpx; 
+}
+.role image{
+  margin-top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.role text{
+  font-size:38rpx;
+  position: relative;
+  color:rgb(122, 122, 122);
+}
+
+.comments{
+    width: 100%;
+    display: inline-block;
+}
+.comments .comment_head image{
+   width: 90rpx; 
+  height:90rpx;  
+  margin-left: 20rpx;
+  margin-top: 50rpx;    
+  float: left;
+
+}
+.comments .comment_name{
+   margin-top: 40rpx;
+   height: 50rpx;
+   display: inline-block;
+}
+.comments .comment_name text{
+  font-size: 35rpx;
+  color: blue;
+}
+.comments .comment_content{
+   margin-top: 20rpx;
+   margin-left: 50rpx;
+   font-size:30rpx;
+}
+.discussview{
+  display: flex;
+}
+.discussview .input{
+  width: 80%;
+  background-color: rgb(206, 206, 206)
+}
+.discussview .send{
+  width: 150rpx;
+  height: 100rpx;
+  float: right;
+  background-color: #74a6f1;
+}
+

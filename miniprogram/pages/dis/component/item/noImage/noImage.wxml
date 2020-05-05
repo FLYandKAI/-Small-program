@@ -1,0 +1,12 @@
+<view class="wrap">
+      <view class="item_container">
+        <view class="text_container">
+          <view class="title">{{item.title}}</view>
+          <text class="content">{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}{{item.content}}</text>
+        <view class="item_info">
+          <text class="iconfont icon-zhuanti item_info_name">   {{nickName}}</text>
+          <text class="iconfont icon-shijian item_info_time">  {{item.returnTime}}</text>
+        </view>
+        </view>
+      </view>
+  </view>

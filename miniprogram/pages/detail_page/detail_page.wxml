@@ -1,0 +1,68 @@
+<!--miniprogram/pages/detail_page/detail_page.wxml-->
+<!-- 作者详情 -->
+<view class="detail_author">
+<view class="detail_head">
+<image src="/images/hind.png" mode="widthFix"/>
+</view>
+<view class="detail_name">
+<text>{{invitation.userName}}</text>
+</view>
+<view class="detail_time">
+<text>{{invitation.returnTime}}</text>
+</view>
+</view>
+<!-- 帖子内容 -->
+<view class="detail_invitation">
+<view class="title">
+<text>{{invitation.title}}</text>
+</view>
+<view class="detail_content">
+<text>{{invitation.content}}</text>
+</view>
+<block wx:for="{{detail_images}}" wx:key="index">
+<view class="images">
+<image src="{{item}}" bindtap='previewimgs' data-img="{{item}}"/>
+</view>
+</block>
+</view>
+<!-- 功能 -->
+<view  class="role" bind:tap="Islogin">
+<view  class="collect" >
+<text>收藏</text>
+<image wx:if="{{collected}}"  catchtap='onCollectionTap' src="/images/detail/collect.png"/>
+<image wx:else catchtap='onCollectionTap' src="/images/detail/collected.png"/>
+</view>
+<view  class="message" bind:tap="CommentOn">
+<text>评论</text>
+<image src="/images/detail/message.png"/>
+</view>
+<view  class="like">
+<text>点赞</text>
+<image wx:if="{{liked}}"  catchtap='onLikeTap' src="/images/detail/like.png"/>
+<image wx:else catchtap='onLikeTap' src="/images/detail/liked.png"/>
+</view>
+</view>
+<!-- 评论区 -->
+<block wx:for="{{comments_data}}" wx:key="index">
+<view class="comments">
+<view class="comment_head">
+<image src="{{item.head}}" mode="widthFix"/>
+</view>
+<view class="comment_name">
+<text>{{item.name}}</text>
+</view>
+<view class="comment_content">
+{{item.content}}
+</view>
+</view>
+</block>
+<block  wx:if="{{discussShow}}">
+<view class="discussview">
+<textarea placeholder="请输入评论内容" class="input" cursor-spacing="20" fixed="true" focus="{{discussShow}}" maxlength="-1" auto-height bindinput="getContent" bind:blur="loseblur"/>
+<view class="send">
+<button type="primary" class="send" bindtap="send" >发送</button>
+</view>
+</view>
+</block>
+
+

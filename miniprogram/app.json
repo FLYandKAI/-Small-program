@@ -6,7 +6,9 @@
     "pages/my/my",
     "pages/acupoint/acupoint",
     "pages/acupoint_item/acupoint_item",
-    "pages/us_page/us_page"
+    "pages/us_page/us_page",
+    "pages/detail_page/detail_page",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

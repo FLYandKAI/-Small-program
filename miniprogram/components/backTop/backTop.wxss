@@ -1,0 +1,11 @@
+/* components/backTop/backTop.wxss */
+@import "../../app.wxss";
+
+.backTop{
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+.iconfont{
+  font-size: 80rpx;
+}

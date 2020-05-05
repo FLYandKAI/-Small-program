@@ -2,12 +2,14 @@
 <!--pages/dis/dis.wxml-->
 <view class="dis_container" bind:tap="modify_data">
 <view class="head float">
-<open-data type="userAvatarUrl"></open-data>
+<open-data type="userAvatarUrl" default-avatar="/images/yellowperson.jpg"></open-data>
 </view>
 <view class="name float">
-<open-data type="userNickName"></open-data>
+<open-data type="userNickName" default-text="匿名用户"></open-data>
 </view>
-
+<view>
+<button  wx:if="{{button_disable}}" class="login_button" type="primary" size="mini" bind:tap="login">登陆</button>
+</view>
 </view>
 <!-- ---------------- -->
 <view class="my"> 

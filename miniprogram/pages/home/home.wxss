@@ -40,7 +40,6 @@ swiper-item image{
 }
 .srcoll-item{
   font-size: 36rpx; 
- 
   display: inline-block;
   margin: 10rpx 40rpx;
 }

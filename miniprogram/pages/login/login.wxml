@@ -1,0 +1,11 @@
+
+<image src="/images/yellowperson.jpg" mode="widthFix"/>
+  <view class='zan-font-14 zan-c-gray-dark' style='text-align:center;margin-top:50rpx'>
+    允许微信授权后，可体验更多功能</view>
+  <view class="zan-btns">
+    <button open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo" class="zan-btn zan-btn--primary">授权登录</button>
+    <button bindtap='navigateBack' class="zan-btn">返回首页</button>
+  </view>
+
+
+  

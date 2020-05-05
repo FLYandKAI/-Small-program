@@ -1,104 +1,44 @@
-
-.header {
-    box-sizing: border-box;
-    border-top: 1rpx solid #ececec;
-    width: 100%;
-    height: 100rpx;
-    line-height: 100rpx;
-    text-align: center;
-    z-index: 1;
-    position: relative;
-    top: 0rpx;
+@import "../../app.wxss";
+page{
+  background-color: white;
 }
-.scroll_top{
-  width: 100%;
-  height: 100rpx;
-  white-space: nowrap;
-}
-.header .item{
-  height: 75rpx;
-  width: 170rpx;
-  display: inline-block;
-  font-size: 34rpx;
-  color: #FFFFFF;
-  line-height: 75rpx;
-  background: #99ccff;
-  border-radius: 80rpx;
-  margin: 10rpx;
-}
-.header .on{ 
-  color: #FFFFFF;  
-  background: linear-gradient(to right, #6E7AEA, #A25EF1);
-}   
-
-
-.backgroundimage_wrap{
-  width: 100%;
-  margin-bottom: 40rpx;
-}
-.backgroundimage{
-  width: 100%;
-  height: 222rpx;
-}
-.icon_wrap{
+.serach_wrap{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 320rpx;
-  right: 25rpx;
-}
-.icon_image{
-  height: 12vh;
-  width: 12vh;
-  border-radius: 15rpx;
-}
-.icon_text{
-  padding: 20rpx;
-  font-size:38rpx; 
-  color: white;
-}
-.disitem_wrap{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 95%;
-  border-bottom: 2rpx solid rgb(240, 240, 240);
-  margin: 10rpx;
-  padding: 15rpx;
-}   
-.disitem_icon_wrap{
-
-}
-.disitem_icon_image{
-  height: 8vh;
-  width: 8vh;
-  border-radius: 15rpx; 
-}
-.disitem_text_wrap{
-  padding-left: 20rpx;
-  width: 95%;
-}
-.disitem_text_name{
-  color: #24998d;
-  font-size: 35rpx;
-}
-.disitem_text_time{
-  font-size: 23rpx;
-  color: rgb(177, 177, 177);
-}
-.disitem_text_content{
-  margin-top: 20rpx;
-  font-size: 30rpx;
-}
-.disitem_text_icon_wrap{
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-
-}
-.disitem_text_icon{
-  display: flex;
+  align-items: center;
   justify-content: space-around;
-  width: 20%;
-  flex-direction: row-reverse;
+  border-bottom: 1rpx solid #b4b4b4;
+  padding: 20rpx;
+  height: 7%;
+  width: 100%;
+}
+.search{
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 50rpx;
+  border: 1rpx solid silver;
+  border-radius: 15rpx;
+  width: 60%;
+  padding: 5rpx 30rpx;
+}
+.input{
+  margin-left: 20rpx;
+  size: 100%;
+}
+.search >.iconfont{
+  font-size: 36rpx;
+  color: #666565;
+}
+.serach_wrap > .iconfont{
+  font-size: 55rpx;
+  color: #666565;
+}
+/* 文章start */
+.scroll_wrap{
+  margin-top: 15%;
 }

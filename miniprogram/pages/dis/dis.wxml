@@ -1,45 +1,18 @@
 
-<view class='header'>
-    <scroll-view class='scroll_top' scroll-x scroll-left="{{scrollLeft}}">
-      <block wx:for="{{topData}}" wx:key="index">
-        <view class="item {{currentTab==index ? 'on' : ''}}" bindtap='switch' data-current="{{index}}">{{item.name}}</view>
-      </block>
-  </scroll-view>
+<view class="serach_wrap">
+  <view class="search">
+    <text class="iconfont icon-sou"></text>
+    <input class="input" placeholder="搜索"></input>
   </view>
-
-<!-- 背景START -->
-<view class="background_wrap">
-  <view class="backgroundimage_wrap">
-    <image class="backgroundimage" src="/images/backgroundimage.jpg" mode="widthFix"></image>
-  </view>
-  <view class="icon_wrap">
-    <text class="icon_text">{{userInfo.nickName}}</text>
-    <image class="icon_image" src="{{userInfo.avatarUrl}}"></image>
-  </view>
+    <text class="iconfont icon-add" bind:tap="handleAddInvt"></text>
 </view>
-<!-- 背景END -->
+<scroll-view scroll-y class="scroll_wrap">
 
 <!-- 讨论条目start -->
-<view class="disitem_wrap">
-  <view class="disitem_icon_wrap">
-    <image class="disitem_icon_image" src="{{userInfo.avatarUrl}}"></image>
-  </view>
-  <view class="disitem_text_wrap">
-    <view class="disitem_text_name">
-      <text>{{userInfo.nickName}}</text>
-    </view>
-    <text class="disitem_text_time">13分钟前</text>
-    <view class="disitem_text_content">
-      <text>
-        隔壁开了家早餐店，九点老爸发了一条微信给我，说:丽情，起床啦，我去买个汤粉给你我内心os:刚好我待会要上课，没想到捡到便宜当然，我觉得这家早餐店的粉不好吃，感觉下了好多的味精
-      </text>
-    </view>
-    <view class="disitem_text_icon_wrap">
-      <view class="disitem_text_icon">
-        <view class="iconfont icon-pinglun"></view>
-        <view class="iconfont icon-dianzan"></view>
-      </view>
-    </view>
-  </view>
-</view>
+<block wx:for = "{{ivitationList.list}}" wx:key = "index" wx:for-item = "item">
+  <hasImage wx:if="{{item.imageUrl}}" nickName="{{userInfo.nickName}}" bind:tap="navigateTo_detail" data-id="{{index}}" item="{{item}}"/>
+  <noImage wx:else item="{{item}}"/>
+</block>
 <!-- 讨论条目end -->
+</scroll-view>
+<backTop wx:if="{{isShowBT}}"/>

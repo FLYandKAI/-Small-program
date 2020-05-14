@@ -61,11 +61,11 @@ margin-top: 30rpx;
 }
 .role image{
   margin-top: 20rpx;
-  width: 40rpx;
-  height: 40rpx;
+  width: 38rpx;
+  height: 38rpx;
 }
 .role text{
-  font-size:38rpx;
+  font-size:34rpx;
   position: relative;
   color:rgb(122, 122, 122);
 }
@@ -83,6 +83,7 @@ margin-top: 30rpx;
 
 }
 .comments .comment_name{
+   margin-left: 20rpx;
    margin-top: 40rpx;
    height: 50rpx;
    display: inline-block;
@@ -93,7 +94,7 @@ margin-top: 30rpx;
 }
 .comments .comment_content{
    margin-top: 20rpx;
-   margin-left: 50rpx;
+   margin-left: 130rpx;
    font-size:30rpx;
 }
 .discussview{
@@ -101,7 +102,8 @@ margin-top: 30rpx;
 }
 .discussview .input{
   width: 80%;
-  background-color: rgb(206, 206, 206)
+  
+  font-size: 40rpx;
 }
 .discussview .send{
   width: 150rpx;
@@ -109,4 +111,15 @@ margin-top: 30rpx;
   float: right;
   background-color: #74a6f1;
 }
+.likelist{
+  display: flex;
 
+}
+.likelist .like_avatarUrl{
+  display: inline-block;
+  margin-left:10rpx; 
+}
+.likelist .like_avatarUrl image{
+   width: 75rpx; 
+  height: 75rpx;  
+}

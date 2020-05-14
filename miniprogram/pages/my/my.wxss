@@ -16,10 +16,7 @@
   font-size: 50rpx;
   position: relative;
 }
-.login_button{
-  margin-top: 75rpx;
-  margin-left: 70rpx;
-}
+
 .dis_container{
   background-color: rgb(106, 177, 243);
   height:200rpx;

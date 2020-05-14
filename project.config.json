@@ -102,6 +102,39 @@
 					"id": -1,
 					"name": "pages/login/login",
 					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/addInvitation/addInvitation",
+					"pathName": "pages/addInvitation/addInvitation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/collectpage/collectpage",
+					"pathName": "pages/collectpage/collectpage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/like_page/like_page",
+					"pathName": "pages/like_page/like_page",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/like_page/like_page",
+					"pathName": "pages/like_page/like_page",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my_invitation/my_invitation",
+					"pathName": "pages/my_invitation/my_invitation",
 					"scene": null
 				}
 			]

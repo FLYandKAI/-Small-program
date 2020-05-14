@@ -3,7 +3,6 @@ Component({
     item:{
       type:Object,
       value:{title:'默认标题'},
-      
       // observer:function(newVal,oldVal){
       //   console.log(newVal,oldVal)
       // }

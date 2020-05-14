@@ -2,7 +2,7 @@
 <!-- 作者详情 -->
 <view class="detail_author">
 <view class="detail_head">
-<image src="/images/hind.png" mode="widthFix"/>
+<image src="{{invitation.avatarUrl}}" mode="widthFix"/>
 </view>
 <view class="detail_name">
 <text>{{invitation.userName}}</text>
@@ -37,19 +37,28 @@
 <image src="/images/detail/message.png"/>
 </view>
 <view  class="like">
-<text>点赞</text>
+<text>点赞{{likeCount}}</text>
 <image wx:if="{{liked}}"  catchtap='onLikeTap' src="/images/detail/like.png"/>
 <image wx:else catchtap='onLikeTap' src="/images/detail/liked.png"/>
 </view>
+</view>
+<!-- 点赞列表 -->
+<my-text title='点赞'/>
+<view class="likelist">
+<block wx:for="{{likelist}}" wx:key="index">
+<view class="like_avatarUrl">
+<image src="{{item.avatarUrl}}" mode="widthFix"/>
+</view>
+</block>
 </view>
 <!-- 评论区 -->
 <block wx:for="{{comments_data}}" wx:key="index">
 <view class="comments">
 <view class="comment_head">
-<image src="{{item.head}}" mode="widthFix"/>
+<image src="{{item.avatarUrl}}" mode="widthFix"/>
 </view>
 <view class="comment_name">
-<text>{{item.name}}</text>
+<text>{{item.username}}</text>
 </view>
 <view class="comment_content">
 {{item.content}}

@@ -8,13 +8,13 @@
 <open-data type="userNickName" default-text="匿名用户"></open-data>
 </view>
 <view>
-<button  wx:if="{{button_disable}}" class="login_button" type="primary" size="mini" bind:tap="login">登陆</button>
+
 </view>
 </view>
 <!-- ---------------- -->
 <view class="my"> 
 <block wx:for-items="{{my_items}}" wx:key="index">
-<view class="my_items" data-type="{{item}}" data-index="{{item}}">
+<view class="my_items" data-type="{{item}}" data-index="{{index}}" bind:tap="chose_my">
   <image src="{{item.image}}"/>
   <view>{{item.name}}</view>
 </view>

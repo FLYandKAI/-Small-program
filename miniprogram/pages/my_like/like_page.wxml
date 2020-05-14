@@ -1,11 +1,4 @@
-
-<view class="serach_wrap">
-    <text class="iconfont icon-add" bind:tap="handleAddInvt">
-    
-    </text>
-</view>
 <scroll-view scroll-y class="scroll_wrap">
-
 <!-- 讨论条目start -->
 <block wx:for = "{{ivitationList.list}}" wx:key = "index" wx:for-item = "item">
   <hasImage wx:if="{{item.imageUrl}}" nickName="{{userInfo.nickName}}" bind:tap="navigateTo_detail" data-id="{{index}}" item="{{item}}"/>

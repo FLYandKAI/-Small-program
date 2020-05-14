@@ -26,35 +26,37 @@ Page({
     //获取页码
     const page = this.data.ivitationList.page + 1;
     wx.request({
-      url: 'https://www.mofashiteam.com/massage/getInvitation',
-      method: "GET",
+      url: 'https://www.mofashiteam.com/massage/getMyLikeList',
+      method: "Get",
       data: {
-        page: _this.data.ivitationList.page
+        token: wx.getStorageSync("token")
       },
       success: function (res) {
+        if(res.data.list==-1){
+          wx.navigateTo({
+            url: '/pages/login/login',
+          })
+        }
         const oldList = _this.data.ivitationList.list;
-        console.log(res)
-        oldList.push(...res.data);
+        oldList.push(...res.data.list);
+        console.log(oldList)
         _this.setData({
           'ivitationList.list': oldList,
           'ivitationList.page': page
         })
-       
       }
     })
   },
   //跳转到详情页
   navigateTo_detail(e){
     var id = e.currentTarget.dataset.id;
+    console.log(id)
     var it = JSON.stringify(this.data.ivitationList.list[id])
     wx.navigateTo({
       url: '../detail_page/detail_page?detail_page_data=' + it,
     })
   },
-  //上拉加载更多
-  onReachBottom(options) {
-    this.getInvitationData();
-  },
+ 
   //判断是否显示回到顶部的按钮
   onPageScroll(options) {
     const scrollTop = options.scrollTop;
@@ -64,19 +66,5 @@ Page({
         isShowBT: flag
       })
     }
-  },
-  //新增按钮
-  handleAddInvt() {
-    var token = wx.getStorageSync('token');
-    console.log(token);
-    if (token==""){
-      wx.navigateTo({
-        url: '/pages/login/login'
-      })
-    }
-    else{ wx.navigateTo({
-       url: '/pages/addInvitation/addInvitation'
-      })
-  }
   }
 })

@@ -3,42 +3,28 @@ page{
   background-color: white;
 }
 .serach_wrap{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 30px;
   position: fixed;
-  top: 0;
-  z-index: 1000;
+  top: 5%;
+  left: 88%;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  border-bottom: 1rpx solid #b4b4b4;
-  padding: 20rpx;
-  height: 7%;
+  justify-content: center;
+  z-index: 999;
+ background-color: #dfdbdb;
+}
+
+.serach_wrap > .iconfont{ 
+
+
   width: 100%;
-}
-.search{
-  background-color: bisque;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  height: 50rpx;
-  border: 1rpx solid silver;
-  border-radius: 15rpx;
-  width: 60%;
-  padding: 5rpx 30rpx;
-}
-.input{
-  margin-left: 20rpx;
-  size: 100%;
-}
-.search >.iconfont{
-  font-size: 36rpx;
-  color: #666565;
-}
-.serach_wrap > .iconfont{
-  font-size: 55rpx;
+  height: 100%;
+  font-size: 80rpx;
   color: #666565;
 }
 /* 文章start */
 .scroll_wrap{
-  margin-top: 15%;
+  margin-top:10rpx ;
 }

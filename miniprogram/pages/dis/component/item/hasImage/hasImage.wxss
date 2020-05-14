@@ -17,7 +17,8 @@
   width: 95%;
 }
 .item_container > image{
-  width:35%;
+  width:40%;
+  height: 250rpx;
 }
 .text_container{
   flex-direction: column;
@@ -48,7 +49,8 @@
 }
 .item_info{
   color: #8a8a8a;
-  size: 22rpx;
+  size: 25rpx;
+  
 }
 .item_info_time{
   margin-left: 5%;

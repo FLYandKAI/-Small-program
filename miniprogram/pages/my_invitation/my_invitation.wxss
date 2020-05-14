@@ -1,0 +1,9 @@
+@import "../../app.wxss";
+page{
+  background-color: white;
+}
+
+/* 文章start */
+.scroll_wrap{
+  margin-top: 10rpx;
+}

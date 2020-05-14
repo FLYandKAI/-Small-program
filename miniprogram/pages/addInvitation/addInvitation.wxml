@@ -40,7 +40,7 @@
         </view>
       </block>
       <view class="iconfont icon-jia addbtn"
-            bind:tap="handleAddImg"></view>
+            bind:tap="handleAddImg"wx:if="{{isShowAddBtn}}"></view>
     </view>
   </view>
 </view>

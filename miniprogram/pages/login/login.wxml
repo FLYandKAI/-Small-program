@@ -1,5 +1,5 @@
 
-<image src="/images/yellowperson.jpg" mode="widthFix"/>
+<image src="/images/yellowperson.jpg" mode="widthFix" style="width:100%"/>
   <view class='zan-font-14 zan-c-gray-dark' style='text-align:center;margin-top:50rpx'>
     允许微信授权后，可体验更多功能</view>
   <view class="zan-btns">

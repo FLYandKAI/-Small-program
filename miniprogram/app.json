@@ -2,13 +2,18 @@
   "pages": [
     "pages/home/home",
     "pages/dis/dis",
+    "pages/my_collect/collectpage",
     "pages/massage/massage",
     "pages/my/my",
     "pages/acupoint/acupoint",
     "pages/acupoint_item/acupoint_item",
     "pages/us_page/us_page",
     "pages/detail_page/detail_page",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/addInvitation/addInvitation",
+    "pages/my_like/like_page",
+    "pages/my_invitation/my_invitation"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -48,4 +53,5 @@
     ]
   },
   "sitemapLocation": "sitemap.json"
+  
 }

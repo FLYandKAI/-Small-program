@@ -1,12 +1,13 @@
 // miniprogram/pages/detail_page/detail_page.js
-var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    content:[],
     invitation:{},
+    likelist:{},
+    likeCount:"",
     current:String,
     discussShow:false,
     collected:true,
@@ -14,20 +15,10 @@ Page({
     detail_images:[
     ],
     comments_data:[
-      {
-      id:1,
-      head: '/images/hind.png',
-      name:'郑树凯',
-      content:'【中国新闻网】5月2日0-24时，山西省新增1例本地确诊病例，为湖北输入病例。其密切接触者首次核酸检测均为阴性，正在集中隔离医学观察。'
-      }, 
-      {
-        id: 2,
-        head: '/images/dis.png',
-        name: '郑树凯',
-        content: '【中国新闻网】5月2日0-24时，山西省新增1例本地确诊病例，为湖北输入病例。其密切接触者首次核酸检测均为阴性，正在集中隔离医学观察。'
-      }
+      {}
     ]
   },
+  //图片预览
   previewimgs: function (e) {
     var currentImg = e.currentTarget.dataset.img;
     wx.previewImage({
@@ -36,33 +27,61 @@ Page({
     })
 
   },
+  //启动评论
   CommentOn:function(e){
     this.setData({
       discussShow:true
     })
+    
   },
+  //是否登陆
   Islogin(e){
-    if (app.globalData.userInfo == null) {
+    var token = wx.getStorageSync('token')
+    console.log(token)
+    if (token == "") {
       wx.navigateTo({
         url: '/pages/login/login'
+      })
+    }else {
+      this.setData({
+        token:token
       })
     }
   },
   // 获得内容
   getContent:function(e){
     this.setData({
-      content
+      content:e.detail.value
     })
   },
   //发送评论成功
   send:function(e){
+    var that=this
+    console.log(this.data.token)
+    wx.request({
+      url: 'https://www.mofashiteam.com/massage/saveComment',
+      method: "POST",
+      data: {
+        content: that.data.content,
+        invitation_id: that.data.invitation.id,
+        token: wx.getStorageSync("token")
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res)
+        console.log(that.data.content)
+      }
+    })
     wx.showToast({
       title: '评论成功',
       icon: 'none',
     })
     this.setData({
       discussShow: false
-    })
+    }),
+    this.onPullDownRefresh()
   },
   //键盘失去焦点
   loseblur(e){
@@ -78,6 +97,20 @@ Page({
       collected: postsCollected
     })
     if (postsCollected==false){
+      wx.request({
+        url: 'https://www.mofashiteam.com/massage/saveFavorite',
+        method: "POST",
+        data: {
+          invitation_id: this.data.invitation.id,
+          token:wx.getStorageSync("token")
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success: function (res) { 
+          console.log(res)
+        }
+      })
      wx.showToast({
         title: '收藏成功',
         icon: 'none',
@@ -93,30 +126,62 @@ Page({
   },
   //点赞
   onLikeTap(e){
+    var that=this;
     var postsliked = this.data.liked;
     postsliked = !postsliked;
     this.setData({
       liked: postsliked
     })
+    var likecount = this.data.likeCount
+    console.log(likecount)
+    if (postsliked==true){
+      likecount = likecount-1;
+      this.setData({
+        likeCount: likecount
+      })
+    }
+    else{
+      likecount = likecount+1;
+      this.setData({
+        likeCount: likecount
+      })
+    }
+    wx.request({
+      url: 'https://www.mofashiteam.com/massage/likeStar',
+      data: {
+        invitation_id: that.data.invitation.id,
+        token: wx.getStorageSync("token")
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      method: "Get",
+      success: function (res) {
+        console.log("点赞/取消成功")
+        if(res.data==-1){
+          wx.navigateTo({
+            url: '/pages/login/login',
+          })
+        }
+        that.onPullDownRefresh()
+      },
+  })
+   
   },
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     var that = JSON.parse(options.detail_page_data)
+    var _this=this
     this.data.detail_images[0] = that.imageUrl
     var image = this.data.detail_images
-    console.log(that)
     this.setData({
-      invitation:that,
-      detail_images:image
+      invitation:that
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+    
 
   },
 
@@ -124,49 +189,63 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
+    var that=this
     wx.request({
       url: 'https://www.mofashiteam.com/massage/getImageForInvitation',
       data: {
-        id: "1",
+        id: this.data.invitation.id,
+      },
+      success: function (res) {
+        that.setData({
+          detail_images:res.data
+        })
+      }
+    })
+    wx.request({
+      url: 'https://www.mofashiteam.com/massage/getComment',
+      data: {
+        invitation_id: this.data.invitation.id
       },
       success: function (res) {
         console.log(res)
+        that.setData({
+          comments_data:res.data
+        })
       }
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+    }),
+      wx.request({
+        url: 'https://www.mofashiteam.com/massage/getLiked',
+        data: {
+          invitation_id: this.data.invitation.id,
+        },
+        method: "Get",
+        success: function (res) {
+          that.setData({
+            likelist: res.data,
+            likeCount: res.data.length
+          })
+          var name = wx.getStorageSync("nickName")
+          for (var i = 0; i < res.data.length; i++) {
+            if (name == res.data[i].username) {
+              that.setData({
+                liked: false
+              })
+            }
+          }
+        }
+      })
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
-  }
+  },
+  onPullDownRefresh: function () {
+    console.log("刷新成功");
+    this.onShow(),
+    
+    wx.stopPullDownRefresh();
+  },
 })

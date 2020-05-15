@@ -114,27 +114,23 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/collectpage/collectpage",
-					"pathName": "pages/collectpage/collectpage",
+					"name": "pages/like_page/like_page",
+					"pathName": "pages/like_page/like_page",
 					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/like_page/like_page",
-					"pathName": "pages/like_page/like_page",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/like_page/like_page",
-					"pathName": "pages/like_page/like_page",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/my_invitation/my_invitation",
 					"pathName": "pages/my_invitation/my_invitation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my_collect/collectpage",
+					"pathName": "pages/my_collect/collectpage",
+					"query": "",
 					"scene": null
 				}
 			]

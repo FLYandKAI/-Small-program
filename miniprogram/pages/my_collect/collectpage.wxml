@@ -1,10 +1,19 @@
 <scroll-view scroll-y class="scroll_wrap">
 
 <!-- 讨论条目start -->
+<view class='body'>
 <block wx:for = "{{ivitationList.list}}" wx:key = "index" wx:for-item = "item">
+  <movable-area class='leftslidea whitebackground'>
+     <movable-view class='leftslideaitem df' direction='horizontal' inertia='true' animation='true' out-of-bounds='true' >
+   <view class='content'>
   <hasImage wx:if="{{item.imageUrl}}" nickName="{{userInfo.nickName}}" bind:tap="navigateTo_detail" data-id="{{index}}" item="{{item}}"/>
   <noImage wx:else item="{{item}}"/>
+  </view>
+      <view class='delbtn' bindtap="delbtn" data-id="{{item.id}}">删除</view>
+      </movable-view> 
+  </movable-area>
 </block>
+</view>
 <!-- 讨论条目end -->
 </scroll-view>
 <backTop wx:if="{{isShowBT}}"/>

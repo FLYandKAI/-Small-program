@@ -37,7 +37,7 @@ Page({
             url: '/pages/login/login',
           })
         }
-        const oldList = _this.data.ivitationList.list;
+        const oldList = new Array();
         oldList.push(...res.data.list);
         console.log(oldList)
         _this.setData({

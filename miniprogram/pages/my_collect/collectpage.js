@@ -24,7 +24,7 @@ Page({
   getInvitationData() {
     let _this = this
     //获取页码
-    const page = this.data.ivitationList.page + 1;
+    const page = this.data.ivitationList.page+1;
     wx.request({
       url: 'https://www.mofashiteam.com/massage/getFavorite',
       method: "Get",
@@ -39,8 +39,8 @@ Page({
           wx.navigateTo({
             url: '/pages/login/login',
           })
-        }
-        const oldList = _this.data.ivitationList.list;
+        } 
+        const oldList=new Array();
         oldList.push(...res.data.list);
         console.log(oldList)
         _this.setData({
@@ -53,7 +53,6 @@ Page({
   //跳转到详情页
   navigateTo_detail(e){
     var id = e.currentTarget.dataset.id;
-    console.log(id)
     var it = JSON.stringify(this.data.ivitationList.list[id])
     wx.navigateTo({
       url: '../detail_page/detail_page?detail_page_data=' + it,
@@ -72,5 +71,26 @@ Page({
         isShowBT: flag
       })
     }
+  },
+  delbtn(e){
+    console.log(e)
+    var id=e.currentTarget.dataset.id
+    var that=this
+    wx.request({
+      url: 'https://www.mofashiteam.com/massage/deleteFavorite',
+      method: "Post",
+      data: {
+        id: id,
+        token: wx.getStorageSync("token")
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res)
+        that.onPullDownRefresh()
+      }
+      })
   }
+    
 })

@@ -40,7 +40,7 @@
       },
       {
         "pagePath": "pages/dis/dis",
-        "text": "讨论区",
+        "text": "热点",
         "iconPath": "images/dis_.png",
         "selectedIconPath": "images/dis.png"
       },

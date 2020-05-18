@@ -19,7 +19,7 @@ page{
 .serach_wrap > .iconfont{ 
   width: 100%;
   height: 100%;
-  margin-bottom: 8rpx;
+  margin-bottom: 6rpx;
   font-size: 80rpx;
   color: #666565;
 }

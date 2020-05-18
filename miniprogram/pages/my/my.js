@@ -25,13 +25,13 @@ Page({
       {
         id: 1,
         name: '我的点赞',
-        image: '/images/message.png'
+        image: '/images/like.png'
 
       },
       {
         id: 2,
         name: '我的帖子',
-        image: '/images/history.png'
+        image: '/images/message.png'
       }
     ]
 
@@ -44,7 +44,29 @@ Page({
       url: '../us_page/us_page',
     })
   },
+  //是否登陆
+  Islogin(e) {
+    wx.checkSession({
+      fail() {
+        wx.navigateTo({
+          url: '/pages/login/login'
+        })
+      }
+    });
+    var token = wx.getStorageSync('token')
+    console.log(token)
+    if (token == "") {
+      wx.navigateTo({
+        url: '/pages/login/login'
+      })
+    } else {
+      this.setData({
+        token: token
+      })
+    }
+  },
   chose_my(e){
+    this.Islogin();
     if (e.currentTarget.dataset.index==0){
         wx.navigateTo({
           url: '/pages/my_collect/collectpage',

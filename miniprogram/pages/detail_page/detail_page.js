@@ -10,7 +10,7 @@ Page({
     likeCount:"",
     current:String,
     discussShow:false,
-    collected:true,
+   
     liked:true,
     detail_images:[
     ],
@@ -36,6 +36,15 @@ Page({
   },
   //是否登陆
   Islogin(e){
+    wx.checkSession({
+      success() {
+      },
+      fail() {
+        wx.navigateTo({
+          url: '/pages/login/login'
+        })
+      }
+    });
     var token = wx.getStorageSync('token')
     console.log(token)
     if (token == "") {
@@ -91,12 +100,6 @@ Page({
   },
   //收藏
   onCollectionTap(e){
-    var postsCollected =this.data.collected;
-    postsCollected = !postsCollected;
-    this.setData({
-      collected: postsCollected
-    })
-    if (postsCollected==false){
       wx.request({
         url: 'https://www.mofashiteam.com/massage/saveFavorite',
         method: "POST",
@@ -115,14 +118,6 @@ Page({
         title: '收藏成功',
         icon: 'none',
       })
-      }
-      else{
-      wx.showToast({
-        title: '已取消收藏',
-        icon: 'none',
-      })
-      }
-    
   },
   //点赞
   onLikeTap(e){
@@ -135,10 +130,6 @@ Page({
     var likecount = this.data.likeCount
     console.log(likecount)
     if (postsliked==true){
-      likecount = likecount-1;
-      this.setData({
-        likeCount: likecount
-      })
     }
     else{
       likecount = likecount+1;

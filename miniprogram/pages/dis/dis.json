@@ -5,6 +5,6 @@
     "noImage": "/pages/dis/component/item/noImage/noImage"
   },
   "enablePullDownRefresh": true,
-  "navigationBarTitleText": "讨论区",
+  "navigationBarTitleText": "热点",
   "navigationBarTextStyle": "white"
 }

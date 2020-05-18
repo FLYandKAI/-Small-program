@@ -9,7 +9,7 @@
 <!-- 讨论条目start -->
 <block wx:for = "{{ivitationList.list}}" wx:key = "index" wx:for-item = "item">
   <hasImage wx:if="{{item.imageUrl}}" nickName="{{userInfo.nickName}}" bind:tap="navigateTo_detail" data-id="{{index}}" item="{{item}}"/>
-  <noImage wx:else item="{{item}}"/>
+  <noImage wx:else item="{{item}}"nickName="{{userInfo.nickName}}" bind:tap="navigateTo_detail" data-id="{{index}}" />
 </block>
 <!-- 讨论条目end -->
 </scroll-view>

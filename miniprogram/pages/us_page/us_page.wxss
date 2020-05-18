@@ -1,21 +1,39 @@
-/* miniprogram/pages/us_page/us_page.wxss */
-.us_page{
-  position: relative;
-  text-align: center;
+@import "../../app.wxss";
+page{
+  background-color: white;
 }
-.us_page text{
-  display: block;
+.body{
+  width: 100%;
+  margin: 0;
+  
+}
+.content {
+  width: 100%;
+}
+/* 文章start */
+.scroll_wrap{
+  margin-top: 10rpx;
+}
+.whitebackground{
+  background: rgb(163, 160, 160);
+
+}
+.leftslidea {
+  width: 100%;
+  height: 250rpx;
+}
+.leftslideaitem {
+  width: 120%;
+}
+.df {
+  display: flex;
+}
+.delbtn {
+  width: 20%;
+  height: 250rpx;
+  line-height: 180rpx;
   font-size: 40rpx;
-  margin-top: 80rpx;
-  margin-bottom: 50rpx;
-}
-.us_page image{
-  width: 400rpx;
-  height: 400rpx;
-}
-.us_page .reminder{
-  margin: 0rpx;
-  font-size:30rpx;
-  display:block;
-  color:rgb(155, 153, 153);
+  text-align: center;
+  background: red;
+  color: white;
 }

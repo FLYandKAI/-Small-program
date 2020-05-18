@@ -9,13 +9,17 @@ Page({
     },
     isShowBT: false
   },
+
   onPullDownRefresh: function () {
-    this.setData({
+    var that=this
+    setTimeout(function () {
+      that.setData({
       'ivitationList.page': 0,
       'ivitationList.list': []
     })
-    this.getInvitationData()
+      that.getInvitationData()
     wx.stopPullDownRefresh();
+    },1000)
   },
   onShow() {
     this.getInvitationData()
@@ -65,8 +69,18 @@ Page({
       })
     }
   },
+  
   //新增按钮
   handleAddInvt() {
+    wx.checkSession({
+      success() {
+      },
+      fail() {
+        wx.navigateTo({
+          url: '/pages/login/login'
+        })
+      }
+    });
     var token = wx.getStorageSync('token');
     console.log(token);
     if (token==""){

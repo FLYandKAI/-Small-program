@@ -7,7 +7,7 @@
      <movable-view class='leftslideaitem df' direction='horizontal' inertia='true' animation='true' out-of-bounds='true' >
    <view class='content'>
   <hasImage wx:if="{{item.imageUrl}}" nickName="{{userInfo.nickName}}" bind:tap="navigateTo_detail" data-id="{{index}}" item="{{item}}"/>
-  <noImage wx:else item="{{item}}"/>
+  <noImage class='noImage' wx:else item="{{item}}"/>
   </view>
       <view class='delbtn' bindtap="delbtn" data-id="{{item.id}}">删除</view>
       </movable-view> 

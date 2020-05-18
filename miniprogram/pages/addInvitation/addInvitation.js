@@ -48,12 +48,19 @@ Page({
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function (res) {
-        console.log(getCurrentPages())
+        if (_this.data.tempFilePaths.length>0){
+        _this.uploadFile(0, res.data)
+        }
+      },
+      complete: function () {
         var pages = getCurrentPages();
         var beforePage = pages[pages.length - 2];
         // 调用列表页的获取数据函数
         beforePage.onPullDownRefresh();
-        _this.uploadFile(0, res.data)
+        
+        wx.navigateBack({
+          data: 1,
+        })
       }
     })
   }),
@@ -92,12 +99,7 @@ Page({
           wx.hideLoading();
           wx.showToast({
             title: '发布成功',
-            duration: 3000,
-            complete: function () {
-              wx.navigateBack({
-                data: 1,
-              })
-            }
+            duration: 3000
           })
         }
         else { //若图片还没有传完，则继续调用函数

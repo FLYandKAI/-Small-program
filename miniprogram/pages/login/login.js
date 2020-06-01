@@ -19,7 +19,6 @@ Page({
   bindGetUserInfo: function (e) {
     wx.login({
       success(res) {
-        console.log(res.code)
         if (res.code) {
               // 发起网络请求
               wx.request({
@@ -34,25 +33,40 @@ Page({
                 },
                 method:'Post',
                 success: function (res) {
-               
+                  console.log(res)
+                  if(res.statusCode==200){
                   wx.setStorageSync("nickName", e.detail.userInfo.nickName);
                   wx.setStorageSync("avatarUrl", e.detail.userInfo.avatarUrl);
                   wx.setStorageSync("token", res.data);
                   console.log(wx.getStorageSync("token"))
-                  var pages = getCurrentPages();
-                  if(pages.length>1){
-                    var beforePage = pages[pages.length - 2];
-                    wx.navigateBack({
-                      delta:1
+                  wx.showToast({
+                      title: '登陆成功',
+                      mask: true
+                    })
+                  }else{
+                    wx.showToast({
+                      title: '登陆失败',
+                      mask: true,
+                      image:"../../images/失败.png"
                     })
                   }
-                  else{
+                  var pages = getCurrentPages();
+                  if (pages.length > 1) {
+                    var beforePage = pages[pages.length - 2];
+                    setTimeout(function () {
+                    wx.navigateBack({
+                      delta: 1
+                    })
+                    }, 1000)
+                  }
+                  else {
+                    setTimeout(function () {
                     wx.switchTab({
                       url: '../home/home'
                     })
+                    }, 1000)
                   }
-                 
-                } 
+                }
           })
         }
         else {

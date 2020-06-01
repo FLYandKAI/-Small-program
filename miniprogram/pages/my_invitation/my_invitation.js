@@ -22,6 +22,8 @@ Page({
   },
   //获取贴子列表
   getInvitationData() {
+    var avatarUrl = wx.getStorageSync("avatarUrl")
+    console.log(avatarUrl)
     let _this = this
     //获取页码
     const page = this.data.ivitationList.page + 1;
@@ -70,7 +72,8 @@ Page({
         isShowBT: flag
       })
     }
-  }, delbtn(e) {
+  }, 
+  delbtn(e) {
     console.log(e)
     var id = e.currentTarget.dataset.id
     var that = this

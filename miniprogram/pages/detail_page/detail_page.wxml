@@ -63,8 +63,8 @@
 </view>
 </block>
 <block  wx:if="{{discussShow}}">
-<view class="discussview">
-<textarea placeholder="请输入评论内容" class="input" cursor-spacing="20" fixed="true" focus="{{discussShow}}" maxlength="-1" auto-height bindinput="getContent" bind:blur="loseblur"/>
+<view class="discussview" style="bottom:{{height == ''?0:height}}px;">
+<textarea placeholder="请输入评论内容" class="input"   bindfocus="getheight" fixed="true" focus="{{discussShow}}" maxlength="-1" auto-height="true" bindinput="getContent" bind:blur="loseblur"/>
 <view class="send">
 <button type="primary" class="send" bindtap="send" >发送</button>
 </view>

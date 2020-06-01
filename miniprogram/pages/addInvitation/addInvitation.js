@@ -33,7 +33,8 @@ Page({
   handleAdd: util.throttle(function () {
     wx.showLoading({
       title: '正在发布...',
-      mask: true
+      mask: true,
+     
     })
     let _this = this
     wx.request({
@@ -57,10 +58,11 @@ Page({
         var beforePage = pages[pages.length - 2];
         // 调用列表页的获取数据函数
         beforePage.onPullDownRefresh();
-        
+        setTimeout(function () {
         wx.navigateBack({
           data: 1,
-        })
+          })
+        },1000)
       }
     })
   }),

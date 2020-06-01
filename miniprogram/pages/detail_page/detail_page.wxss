@@ -57,7 +57,7 @@ margin-top: 30rpx;
    margin-top: 30rpx;
 }
 .role view{
-  margin-left:130rpx; 
+  margin-left:135rpx; 
 }
 
 .role text{
@@ -94,11 +94,13 @@ margin-top: 30rpx;
    font-size:30rpx;
 }
 .discussview{
+  background-color: rgb(224, 224, 224);
   display: flex;
+  position: fixed;
+  width: 100%;
 }
 .discussview .input{
   width: 80%;
-  
   font-size: 40rpx;
 }
 .discussview .send{

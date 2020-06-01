@@ -46,13 +46,6 @@ Page({
   },
   //是否登陆
   Islogin(e) {
-    wx.checkSession({
-      fail() {
-        wx.navigateTo({
-          url: '/pages/login/login'
-        })
-      }
-    });
     var token = wx.getStorageSync('token')
     console.log(token)
     if (token == "") {
@@ -60,10 +53,18 @@ Page({
         url: '/pages/login/login'
       })
     } else {
+      wx.checkSession({
+        fail() {
+          wx.navigateTo({
+            url: '/pages/login/login'
+          })
+        }
+      });
       this.setData({
         token: token
       })
     }
+   
   },
   chose_my(e){
     this.Islogin();

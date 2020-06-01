@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    height: '',
     content:[],
     invitation:{},
     likelist:{},
@@ -33,6 +34,14 @@ Page({
       discussShow:true
     })
     
+  },
+  getheight(e){
+    console.log(e);
+    var y = e.detail.height;
+    console.log(y)
+    this.setData({
+      height: y
+    })
   },
   //是否登陆
   Islogin(e){
@@ -166,14 +175,13 @@ Page({
   onLoad: function (options) {
     console.log(options)
     var that = JSON.parse(options.detail_page_data)
+    console.log(that)
     var _this=this
     this.data.detail_images[0] = that.imageUrl
     var image = this.data.detail_images
     this.setData({
       invitation:that
     })
-    
-
   },
 
   /**

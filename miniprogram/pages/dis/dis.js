@@ -19,7 +19,7 @@ Page({
     })
       that.getInvitationData()
     wx.stopPullDownRefresh();
-    },1000)
+    },1500)
   },
   onShow() {
     this.getInvitationData()
@@ -72,25 +72,28 @@ Page({
   
   //新增按钮
   handleAddInvt() {
-    wx.checkSession({
-      success() {
-      },
-      fail() {
-        wx.navigateTo({
-          url: '/pages/login/login'
-        })
-      }
-    });
     var token = wx.getStorageSync('token');
-    console.log(token);
+    console.log("token:"+token);
     if (token==""){
       wx.navigateTo({
         url: '/pages/login/login'
       })
     }
-    else{ wx.navigateTo({
-       url: '/pages/addInvitation/addInvitation'
-      })
+    else{ 
+      wx.checkSession({
+        success() {
+          wx.navigateTo({
+            url: '/pages/addInvitation/addInvitation'
+          })
+        },
+        fail() {
+          wx.navigateTo({
+            url: '/pages/login/login'
+          })
+        }
+      });
+     
   }
+   
   }
 })
